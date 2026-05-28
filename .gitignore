@@ -1,0 +1,8 @@
+node_modules/
+*.HEIC
+*.DNG
+*celsi.jpeg
+*fundo preto.png
+pagina_vendas_lucro (15).html
+package.json
+package-lock.json

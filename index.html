@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garçom que Vende. Restaurante que Lucra. — Método L.U.C.R.O.</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#C9A84C;--gl:#F0D080;--gf:#16120A;--gm:#1E1A0E;
+  --k:#0A0A0A;--km:#111;--kc:#181818;
+  --w:#FFF;--gr:#888;
+  --vd:#0A5C44;--vm:#18A876;--rd:#A93226;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--k);color:var(--w);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.15}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+.tag{display:inline-block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--g);border:1px solid var(--g);padding:4px 14px;border-radius:1px;margin-bottom:1rem}
+.btn{display:block;background:var(--g);color:var(--k);font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1.15rem 2rem;border-radius:3px;border:none;cursor:pointer;width:100%;text-align:center;transition:all .2s;text-decoration:none}
+.btn:hover{background:var(--gl);transform:translateY(-1px);box-shadow:0 8px 30px rgba(201,168,76,.3)}
+.btn-green{background:var(--vd)}
+.btn-green:hover{background:#0d7a5c}
+.gm{font-size:.7rem;color:#666;display:flex;align-items:center;justify-content:center;gap:4px;margin-top:.6rem}
+.gm i{color:var(--vd);font-size:13px}
+.sep{border:none;border-top:1px solid #1E1E1E;margin:0}
+
+/* ── BARRA TOPO ── */
+.bt{background:linear-gradient(90deg,#8B6914,var(--g),#8B6914);padding:.55rem 1.5rem;text-align:center}
+.bt p{font-size:.72rem;font-weight:700;color:var(--k);letter-spacing:.07em;text-transform:uppercase}
+
+/* ── NAV ── */
+.nav{background:var(--k);padding:.85rem 1.5rem;border-bottom:1px solid #1A1A1A;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;position:sticky;top:0;z-index:100}
+.nav img{height:70px;width:auto}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;
+  background-image:url('IMG_0130.jpg');
+  background-size:cover;background-position:center 30%}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,10,10,.78) 45%,rgba(10,10,10,.45) 100%)}
+.hero-in{position:relative;z-index:2;padding:5rem 1.5rem 4rem;max-width:960px;margin:0 auto;width:100%}
+.hero-logo{margin-bottom:2rem}
+.hero-logo img{height:130px;width:auto;filter:drop-shadow(0 4px 24px rgba(201,168,76,.5))}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:1.25rem}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--g)}
+.hero h1{font-size:clamp(2rem,5.5vw,3.8rem);font-weight:700;color:var(--w);margin-bottom:1rem;max-width:680px}
+.hero h1 em{color:var(--g);font-style:italic}
+.hero-sub{font-size:1rem;color:#BBB;max-width:560px;margin-bottom:2rem;line-height:1.8}
+.hero-sub strong{color:var(--w)}
+/* Vídeo placeholder */
+.hero-vid{background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.2);border-radius:4px;padding:1.4rem 1.75rem;max-width:540px;margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem}
+.hero-vid-btn{width:46px;height:46px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer}
+.hero-vid-btn i{font-size:20px;color:var(--g)}
+.hero-vid-info p{font-size:.85rem;color:#AAA;margin-bottom:.15rem}
+.hero-vid-info span{font-size:.68rem;color:#555}
+.hero-badges{display:flex;gap:1.5rem;flex-wrap:wrap}
+.hb{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:#999}
+.hb i{color:var(--g);font-size:15px}
+
+/* ── CTA TOPO ── */
+.cta-top{background:var(--gf);border-top:2px solid var(--g);border-bottom:1px solid rgba(201,168,76,.2);padding:3.5rem 1.5rem;text-align:center}
+.cta-top-in{max-width:600px;margin:0 auto}
+.urgencia{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:.75rem}
+.cron{display:flex;justify-content:center;gap:.75rem;margin-bottom:2rem}
+.cb{background:var(--k);border:1px solid var(--g);border-radius:3px;padding:.7rem 1.1rem;min-width:64px}
+.cn{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:700;color:var(--g);display:block;line-height:1}
+.cl{font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);display:block;margin-top:3px}
+.dpill{display:inline-block;background:var(--rd);color:#fff;font-size:.7rem;font-weight:700;padding:5px 18px;border-radius:2px;margin-bottom:1.5rem;letter-spacing:.04em;text-transform:uppercase}
+/* ENTREGÁVEIS */
+.entregaveis{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin:0 0 1.75rem;text-align:left}
+.ei{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);border-radius:3px;padding:.65rem .8rem;display:flex;gap:.5rem;align-items:flex-start}
+.ei i{color:var(--g);font-size:14px;flex-shrink:0;margin-top:1px}
+.ei span{font-size:.75rem;color:#CCC;line-height:1.45}
+.ei span strong{color:var(--gl);display:block;font-size:.76rem;margin-bottom:1px}
+/* PREÇO */
+.preco-pill{background:var(--k);border:1px solid rgba(201,168,76,.45);border-radius:5px;padding:1.6rem;margin-bottom:1.1rem}
+.p-de{font-size:.8rem;color:#555;text-decoration:line-through}
+.p-val{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;color:var(--w);line-height:1;margin:.1rem 0}
+.p-val span{color:var(--g)}
+.p-div{border-top:1px solid #1E1E1E;padding-top:.85rem;margin-top:.85rem}
+.p-ou{font-size:.62rem;color:#666;text-transform:uppercase;letter-spacing:.08em}
+.p-par{font-size:1.5rem;font-weight:600;color:var(--gl);margin:.15rem 0 .1rem}
+.p-par strong{font-size:1.85rem;font-family:'Cormorant Garamond',serif}
+.p-dia{font-size:.7rem;color:#777}
+
+/* ── FOTO FULL ── */
+.foto-full{height:320px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.foto-full::before{content:'';position:absolute;inset:0;background:rgba(10,10,10,.55);z-index:1}
+.foto-full-txt{z-index:2}
+.foto-full-txt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;z-index:3}
+.f3::before{background:rgba(10,10,10,.2)!important}
+.foto-full-txt h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,4vw,2.3rem);color:var(--w);font-style:italic;max-width:640px;margin-bottom:.5rem}
+.foto-full-txt p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:480px;margin:0 auto}
+.f1{background-image:url('IMG_0142.jpg');background-position:center 40%}
+.f2{background-image:url('IMG_2053.jpg');background-position:center 30%}
+.f3{background:linear-gradient(135deg,#16120A 0%,#1E1800 40%,#0A1A10 70%,#0A0A0A 100%);position:relative}
+.f3::after{content:'L.U.C.R.O.';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18vw;font-weight:700;color:rgba(201,168,76,.04);letter-spacing:.3em;pointer-events:none;z-index:0}
+
+/* ── LÂMINA NAOE (não é / é) ── */
+.naoe{background:var(--km);padding:4rem 0}
+.naoe-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.85rem;margin-bottom:1.5rem}
+.ni{background:var(--kc);border-left:2px solid var(--g);padding:1.1rem 1.25rem;border-radius:0 3px 3px 0}
+.ni-l{font-size:.62rem;font-weight:700;color:var(--g);letter-spacing:.11em;text-transform:uppercase;margin-bottom:.4rem;display:flex;align-items:center;gap:.3rem}
+.ni p{font-size:.87rem;color:#CCC;line-height:1.6}
+.ni p strong{color:var(--w)}
+
+/* ── LÂMINA ENTREGÁVEIS VISUAIS (estilo Family Shot Cronos) ── */
+.family{background:var(--k);padding:4rem 0;text-align:center}
+.family h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.4rem);color:var(--w);margin-bottom:.5rem}
+.family-sub{font-size:.92rem;color:#AAA;margin-bottom:2.5rem}
+.family-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#1A1A1A;border:1px solid #1A1A1A;border-radius:6px;overflow:hidden;margin-bottom:2.5rem}
+.fg{background:var(--kc);padding:1.5rem 1.25rem;text-align:center}
+.fg i{font-size:32px;color:var(--g);display:block;margin-bottom:.75rem}
+.fg h3{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--w);margin-bottom:.35rem;font-weight:700}
+.fg p{font-size:.75rem;color:#888;line-height:1.5}
+.fg-dest{background:var(--gf);border:1px solid rgba(201,168,76,.3)}
+.fg-dest i{color:var(--gl)}
+.fg-dest h3{color:var(--g)}
+
+/* ── SPLIT COM FOTO ── */
+.split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.split.rev{direction:rtl}
+.split.rev>*{direction:ltr}
+.simg{min-height:420px;background-size:cover;background-position:center;position:relative}
+.simg::before{content:'';position:absolute;inset:0;background:rgba(10,10,10,.35)}
+.simg-ov{position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,rgba(10,10,10,.85))}
+.split.rev .simg-ov{background:linear-gradient(270deg,transparent 50%,rgba(10,10,10,.85))}
+.stxt{background:var(--km);padding:3.5rem 2.5rem;display:flex;flex-direction:column;justify-content:center}
+.stxt .tag{margin-bottom:.75rem}
+.stxt h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--w);margin-bottom:.8rem}
+.stxt p{font-size:.88rem;color:#CCC;line-height:1.8;margin-bottom:.65rem}
+.slist{list-style:none;margin-top:.5rem}
+.slist li{display:flex;gap:.5rem;align-items:flex-start;font-size:.85rem;color:#CCC;padding:.35rem 0;border-bottom:1px solid #252525}
+.slist li:last-child{border:none}
+.slist li i{color:var(--g);font-size:13px;flex-shrink:0;margin-top:2px}
+/* IDs das fotos splits */
+.simg-1{background-image:url('IMG_2043.jpg')}
+.simg-2{background-image:url('IMG_2121.jpg')}
+.simg-3{background-image:url('foto_celsi.jpg')}
+
+/* ── CALCULADORA ── */
+.calc-sec{background:var(--gf);border-top:1px solid rgba(201,168,76,.2);border-bottom:1px solid rgba(201,168,76,.2);padding:4rem 0}
+.calc-g{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.calc-txt h2{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--g);font-style:italic;margin-bottom:.75rem}
+.calc-txt p{font-size:.88rem;color:#CCC;line-height:1.75;margin-bottom:.65rem}
+.clist{list-style:none}
+.clist li{font-size:.84rem;color:#CCC;padding:.28rem 0;display:flex;gap:.5rem;align-items:center;border-bottom:1px solid rgba(201,168,76,.1)}
+.clist li:last-child{border:none}
+.clist li i{color:var(--g);font-size:13px;flex-shrink:0}
+.cmock{background:var(--k);border:1px solid rgba(201,168,76,.45);border-radius:6px;overflow:hidden;box-shadow:0 16px 60px rgba(201,168,76,.12)}
+.cbar{background:var(--g);padding:.55rem 1rem;display:flex;align-items:center;gap:.5rem}
+.cbar-dots{display:flex;gap:4px}
+.cbar-dots span{width:7px;height:7px;border-radius:50%;background:rgba(0,0,0,.25);display:block}
+.cbar-title{font-size:.65rem;font-weight:700;color:var(--k);letter-spacing:.08em;text-transform:uppercase;flex:1;text-align:center}
+.cbody{padding:1.15rem}
+.cf{margin-bottom:.5rem}
+.cfl{font-size:.58rem;color:#666;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.22rem}
+.cfv{background:var(--km);border:1px solid #252525;border-radius:3px;padding:.4rem .7rem;font-size:.78rem;color:#CCC;display:flex;justify-content:space-between}
+.cfv span{color:#555;font-size:.72rem}
+.cres{background:var(--gf);border:2px solid var(--g);border-radius:5px;padding:.9rem;margin-top:.75rem}
+.cres-g{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-bottom:.55rem}
+.cri{background:var(--km);border-radius:3px;padding:.42rem .6rem;text-align:center}
+.cri-l{font-size:.54rem;color:#888;text-transform:uppercase;letter-spacing:.07em}
+.cri-v{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gl)}
+.cres-mes{background:var(--rd);border-radius:4px;padding:.7rem;text-align:center;margin-bottom:.4rem}
+.cres-mes-l{font-size:.57rem;color:#FFB3A7;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.12rem}
+.cres-mes-v{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--w)}
+.cres-mes-s{font-size:.6rem;color:#FFB3A7;margin-top:.1rem}
+.cano{background:var(--gf);border:1px solid var(--g);border-radius:4px;padding:.65rem;text-align:center;position:relative;overflow:hidden}
+.cano::after{content:'';position:absolute;inset:0;background:rgba(22,18,10,.72);backdrop-filter:blur(7px)}
+.cano-in{position:relative;z-index:1}
+.cano-l{font-size:.58rem;color:var(--g);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.12rem}
+.cano-v{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gl)}
+.cano-s{font-size:.63rem;color:var(--g);margin-top:.15rem;font-style:italic}
+.clock{font-size:.63rem;color:#555;display:flex;align-items:center;justify-content:center;gap:.3rem;margin-top:.4rem}
+
+/* ── PLUG & PLAY ── */
+.plug{background:var(--vd);padding:4rem 0}
+.plug .tag{color:#9FE1CB;border-color:#9FE1CB}
+.plug-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:.7rem;margin-bottom:2rem}
+.pi{background:rgba(4,52,44,.6);border:1px solid rgba(157,225,203,.2);border-radius:4px;padding:.9rem}
+.pi-n{font-size:.6rem;color:#5DCAA5;font-weight:600;margin-bottom:.18rem;text-transform:uppercase;letter-spacing:.08em}
+.pi-t{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--w);margin-bottom:.18rem;font-weight:600}
+.pi-d{font-size:.75rem;color:#9FE1CB;line-height:1.5}
+.plug-cta{text-align:center}
+.pc-f{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--w);font-style:italic;margin-bottom:.3rem}
+.pc-s{font-size:.84rem;color:#9FE1CB;margin-bottom:1.2rem}
+
+/* ── MÓDULOS ── */
+.mods{background:var(--k);padding:4rem 0}
+.mi{margin-bottom:.55rem;border:1px solid #1A1A1A;border-radius:4px;overflow:hidden;background:var(--kc)}
+.mh{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.15rem;cursor:pointer}
+.mn{width:30px;height:30px;border-radius:50%;background:var(--gf);border:1px solid var(--g);color:var(--g);font-weight:600;font-size:.78rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mw{flex:1}
+.mt2{font-family:'Cormorant Garamond',serif;font-size:.96rem;color:var(--w);margin-bottom:1px;font-weight:700}
+.ms2{font-size:.7rem;color:var(--gr)}
+.mc{color:var(--gr);font-size:15px;transition:transform .25s}
+.mb{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.mb.ab{max-height:700px}
+.mbi{padding:0 1.15rem 1.15rem 3.1rem}
+.ar{display:flex;gap:.4rem;align-items:flex-start;padding:.32rem 0;border-bottom:1px solid #1A1A1A;font-size:.79rem;color:#999}
+.ar:last-child{border:none}
+.ar i{color:var(--g);font-size:12px;flex-shrink:0;margin-top:2px}
+.mat{display:inline-flex;align-items:center;gap:2px;background:var(--gf);border:1px solid rgba(201,168,76,.35);color:var(--g);font-size:.56rem;font-weight:600;padding:1px 5px;border-radius:2px;margin-left:3px;vertical-align:middle}
+.pp{border-color:rgba(24,168,118,.35)!important}
+.pp .mn{background:#042C1E;border-color:var(--vm);color:#5DCAA5}
+.pp .mt2{color:#9FE1CB}
+
+/* ── INTEGRAÇÃO ── */
+.int-sec{background:var(--km);padding:4rem 0}
+.int-hero{background:linear-gradient(135deg,var(--gf),#0A1A10);border:1px solid rgba(201,168,76,.35);border-radius:6px;padding:2rem;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center}
+.int-badge{display:inline-block;background:var(--rd);color:#fff;font-size:.58rem;font-weight:700;padding:3px 10px;border-radius:2px;text-transform:uppercase;margin-bottom:.5rem}
+.int-titulo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--g);font-style:italic;margin-bottom:.5rem}
+.int-desc{font-size:.87rem;color:#CCC;line-height:1.7}
+.int-stat{background:var(--k);border:1px solid var(--g);border-radius:4px;padding:1rem 1.5rem;text-align:center;flex-shrink:0}
+.int-stat-n{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--gl);line-height:1}
+.int-stat-t{font-size:.63rem;color:#888;line-height:1.4;margin-top:.2rem;max-width:80px}
+.iprog{display:flex;align-items:center;margin-bottom:1.5rem}
+.ips{flex:1;text-align:center}
+.ipc{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .3rem;font-size:.8rem;font-weight:600}
+.s1 .ipc{background:var(--g);color:var(--k)}
+.s2 .ipc{background:var(--vd);color:var(--w)}
+.s3 .ipc{background:#5C3A8C;color:var(--w)}
+.ipl{font-size:.62rem;color:#777;text-transform:uppercase;letter-spacing:.07em}
+.iline{flex:1;height:1px}
+.il1{background:linear-gradient(90deg,var(--g),var(--vd))}
+.il2{background:linear-gradient(90deg,var(--vd),#5C3A8C)}
+.int-dias{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.25rem}
+.id{background:var(--kc);border-radius:5px;overflow:hidden;border:1px solid #222}
+.id-hd{padding:.8rem 1rem;display:flex;align-items:center;gap:.55rem}
+.d1h{background:linear-gradient(135deg,#1E1800,#2A2210)}
+.d2h{background:linear-gradient(135deg,#042C1E,#085041)}
+.d3h{background:linear-gradient(135deg,#1A0A1E,#2A1035)}
+.id-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700}
+.d1h .id-num{border:1px solid var(--g);color:var(--g)}
+.d2h .id-num{border:1px solid #5DCAA5;color:#5DCAA5}
+.d3h .id-num{border:1px solid #9B7FD4;color:#9B7FD4}
+.id-tit{font-size:.78rem;font-weight:600;color:var(--w)}
+.id-sub{font-size:.64rem;color:#777}
+.id-bd{padding:.8rem 1rem}
+.id-item{display:flex;gap:.38rem;align-items:flex-start;font-size:.76rem;color:#999;padding:.27rem 0;border-bottom:1px solid #1A1A1A;line-height:1.45}
+.id-item:last-child{border:none}
+.id-item i{font-size:11px;flex-shrink:0;margin-top:2px}
+.d1h .id-item i{color:var(--g)}
+.d2h .id-item i{color:#5DCAA5}
+.int-ft{background:linear-gradient(135deg,var(--gf),#042C1E);border:1px solid rgba(201,168,76,.3);border-radius:5px;padding:1.15rem 1.5rem;display:flex;gap:.85rem;align-items:center}
+.int-ft i{font-size:26px;color:var(--g);flex-shrink:0}
+.int-ft strong{color:var(--gl);display:block;font-size:.9rem;margin-bottom:.15rem}
+.int-ft p{font-size:.82rem;color:#CCC;line-height:1.55}
+
+/* ── BÔNUS ── */
+.bon{background:var(--gf);border-top:1px solid rgba(201,168,76,.18);padding:4rem 0}
+.bon-g{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem}
+.bc{background:var(--k);border:1px solid #1A1A1A;border-radius:4px;overflow:hidden}
+.bc-top{height:66px;display:flex;align-items:center;justify-content:center;position:relative}
+.bc-top.g{background:linear-gradient(135deg,#1E1800,#2A2210)}
+.bc-top.v{background:linear-gradient(135deg,#042C1E,#085041)}
+.bc-top i{font-size:26px;color:var(--g)}
+.bc-top.v i{color:#5DCAA5}
+.bc-bdg{position:absolute;top:5px;right:5px;background:var(--rd);color:#fff;font-size:.52rem;font-weight:700;padding:2px 5px;border-radius:2px;text-transform:uppercase}
+.bc-body{padding:.85rem}
+.bc-t{font-weight:600;font-size:.8rem;color:var(--w);margin-bottom:.18rem}
+.bc-d{font-size:.68rem;color:#666;line-height:1.4}
+.bc-manual{background:var(--k);border:1px solid #252525;border-radius:4px;overflow:hidden;grid-column:span 2}
+.bcm-top{background:linear-gradient(135deg,#1E1800,#2A2210);padding:1rem 1.15rem;display:flex;gap:.85rem;align-items:center}
+.bcm-ico{width:44px;height:44px;border-radius:4px;background:var(--gf);border:1px solid var(--g);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bcm-ico i{font-size:22px;color:var(--g)}
+.bcm-top h4{font-family:'Cormorant Garamond',serif;font-size:.98rem;color:var(--g);margin-bottom:.18rem;font-weight:700}
+.bcm-top p{font-size:.7rem;color:#AAA;line-height:1.5}
+.bcm-body{padding:.9rem 1.15rem}
+.bcm-secs{display:grid;grid-template-columns:1fr 1fr;gap:.42rem;margin-bottom:.55rem}
+.bcm-sec{background:var(--km);border:1px solid #222;border-radius:3px;padding:.42rem .58rem;display:flex;gap:.33rem;align-items:flex-start}
+.bcm-sec i{color:var(--g);font-size:11px;flex-shrink:0;margin-top:2px}
+.bcm-sec span{font-size:.68rem;color:#CCC;line-height:1.4}
+.bcm-ft{background:var(--gf);border:1px solid rgba(201,168,76,.18);border-radius:3px;padding:.42rem .65rem;display:flex;align-items:center;gap:.33rem}
+.bcm-ft i{color:var(--g);font-size:12px;flex-shrink:0}
+.bcm-ft span{font-size:.68rem;color:#AAA}
+.bc-int{background:var(--k);border:2px solid rgba(201,168,76,.45);border-radius:4px;overflow:hidden;grid-column:span 2}
+.bci-top{background:linear-gradient(135deg,#1A1400,#0A1A10);padding:.9rem 1.1rem;display:flex;gap:.65rem;align-items:center}
+.bci-top i{font-size:24px;color:var(--g);flex-shrink:0}
+.bci-top h4{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--g);margin-bottom:.12rem;font-weight:700}
+.bci-top p{font-size:.68rem;color:#AAA}
+.bci-body{padding:.8rem 1.1rem}
+.bdias{display:flex;gap:.38rem;margin-bottom:.55rem}
+.bdia{flex:1;background:var(--km);border-radius:3px;padding:.38rem .5rem;text-align:center;border:1px solid #222}
+.bdia-n{font-family:'Cormorant Garamond',serif;font-size:.92rem;font-weight:700}
+.bdia-t{font-size:.58rem;color:#777;line-height:1.3;margin-top:.1rem}
+.bit{display:inline-flex;align-items:center;gap:.28rem;background:var(--gf);border:1px solid rgba(201,168,76,.28);border-radius:2px;padding:3px 8px;font-size:.62rem;color:var(--g)}
+
+/* ── CTA MEIO ── */
+.cta-meio{background:var(--k);border-top:1px solid rgba(201,168,76,.2);border-bottom:1px solid rgba(201,168,76,.2);padding:3.5rem 1.5rem;text-align:center}
+.cta-meio-in{max-width:580px;margin:0 auto}
+.cta-meio h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--gl);font-style:italic;margin-bottom:.5rem}
+.cta-meio p{font-size:.9rem;color:#AAA;margin-bottom:1.5rem}
+.preco-mini{font-size:.8rem;color:#555;text-decoration:line-through;margin-bottom:.15rem}
+.preco-val{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--w);line-height:1}
+.preco-val span{color:var(--g)}
+.preco-parcel{font-size:1.2rem;font-weight:600;color:var(--gl);margin:.2rem 0 1.25rem}
+.preco-parcel strong{font-size:1.5rem;font-family:'Cormorant Garamond',serif}
+
+/* ── VITALÍCIO ── */
+.vit{border-top:2px solid var(--g);border-bottom:2px solid var(--g)}
+.vit-g{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.vimg{min-height:400px;background-size:cover;background-position:center;position:relative;background-image:url('IMG_2143.jpg')}
+.vimg::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.3),rgba(10,10,10,.82))}
+.vtxt{background:var(--kc);padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center}
+.vtxt h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--g);font-style:italic;margin-bottom:.75rem}
+.vtxt p{font-size:.88rem;color:#CCC;line-height:1.8;margin-bottom:.65rem}
+.vlist{list-style:none;margin-top:.4rem}
+.vlist li{display:flex;gap:.5rem;align-items:flex-start;font-size:.84rem;color:#CCC;padding:.32rem 0;border-bottom:1px solid #222}
+.vlist li:last-child{border:none}
+.vlist li i{color:var(--g);font-size:13px;flex-shrink:0;margin-top:2px}
+.vstat{background:var(--gf);border:1px solid rgba(201,168,76,.28);border-radius:4px;padding:.75rem 1rem;margin-top:1rem;display:flex;align-items:center;gap:.75rem}
+.vstat-n{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gl);font-weight:700;flex-shrink:0}
+.vstat-t{font-size:.73rem;color:#888;line-height:1.4}
+
+/* ── DEPOIMENTOS ── */
+.dep{background:var(--km);padding:4rem 0}
+.dep-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.9rem}
+.dc{background:var(--kc);border:1px solid #252525;border-radius:4px;padding:1.4rem}
+.ds{color:var(--g);font-size:12px;letter-spacing:2px;margin-bottom:.7rem}
+.dt{font-size:.87rem;color:#CCC;line-height:1.6;font-style:italic;margin-bottom:.9rem}
+.da{display:flex;align-items:center;gap:.65rem}
+.dav{width:34px;height:34px;border-radius:50%;background:var(--gf);border:1px solid var(--g);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--g)}
+.dn{font-size:.82rem;font-weight:500;color:var(--w)}
+.dca{font-size:.7rem;color:var(--gr)}
+
+/* ── SOBRE MIM ── */
+.sobre{background:var(--k);padding:4rem 0}
+.sobre-g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.sobre-img{position:relative;min-height:420px;background-size:cover;background-position:center 20%;border-radius:6px;overflow:hidden;background-image:url('foto_celsi.jpg')}
+.sobre-img::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,10,10,.8))}
+.sobre-txt h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--g);font-style:italic;margin-bottom:1rem}
+.sobre-txt p{font-size:.88rem;color:#CCC;line-height:1.8;margin-bottom:.75rem}
+.sobre-stats{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.25rem}
+.ss{background:var(--gf);border:1px solid rgba(201,168,76,.25);border-radius:4px;padding:.85rem;text-align:center}
+.ss-n{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gl);font-weight:700;line-height:1}
+.ss-t{font-size:.7rem;color:#888;line-height:1.4;margin-top:.2rem}
+
+/* ── GARANTIA ── */
+.gar{background:var(--km);padding:4rem 0}
+.gar-box{border:2px solid rgba(201,168,76,.45);border-radius:6px;padding:2.5rem;max-width:700px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
+.gar-ico{font-size:54px;color:var(--g);flex-shrink:0}
+.gar-t{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--g);margin-bottom:.5rem}
+.gar-d{font-size:.88rem;color:#CCC;line-height:1.7}
+
+/* ── CARTA ── */
+.carta{background:var(--gf);border-top:1px solid rgba(201,168,76,.18);padding:4rem 0}
+.carta-in{max-width:700px;margin:0 auto}
+.carta-in h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--g);font-style:italic;margin-bottom:1.5rem}
+.carta-in p{font-size:.92rem;color:#CCC;line-height:1.85;margin-bottom:.9rem}
+.carta-ass{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--g);font-style:italic;margin-top:1.5rem}
+
+/* ── PREÇO FINAL ── */
+.preco-sec{background:var(--k);padding:4rem 0}
+.pcard{background:var(--kc);border:1px solid rgba(201,168,76,.45);border-radius:6px;padding:2.5rem;max-width:520px;margin:0 auto;text-align:center}
+.pcard-t{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--g);font-style:italic;margin-bottom:.25rem}
+.pcard-s{font-size:.72rem;color:#666;margin-bottom:1.5rem}
+.plista{text-align:left;border-top:1px solid #252525;padding-top:1.25rem;margin-bottom:1.5rem}
+.pl{display:flex;gap:.45rem;align-items:flex-start;font-size:.83rem;color:#CCC;padding:.28rem 0}
+.pl i{color:var(--g);font-size:13px;flex-shrink:0;margin-top:2px}
+.pnum{border-top:1px solid #252525;padding-top:1.5rem}
+.pde{font-size:.8rem;color:#555;text-decoration:line-through;margin-bottom:.15rem}
+.pval{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--w);line-height:1}
+.pval span{color:var(--g)}
+.pbox{background:var(--gf);border:1px solid rgba(201,168,76,.38);border-radius:4px;padding:.85rem;margin:.7rem 0 1.25rem}
+.pbox-ou{font-size:.6rem;color:#666;text-transform:uppercase;letter-spacing:.08em}
+.pbox-val{font-size:1.45rem;font-weight:600;color:var(--gl)}
+.pbox-val strong{font-size:1.8rem;font-family:'Cormorant Garamond',serif}
+.pbox-desc{font-size:.7rem;color:#888;margin-top:.1rem}
+
+/* ── FAQ ── */
+.faq{background:var(--km);padding:4rem 0}
+.fi{border-bottom:1px solid #252525;padding:.9rem 0}
+.fq{font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--w)}
+.fq i{flex-shrink:0;font-size:15px;color:var(--g);transition:transform .25s}
+.fr{font-size:.86rem;color:#999;line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease}
+.fr.ab{max-height:300px}
+.fr-in{padding:.65rem 0 .2rem}
+
+/* ── CTA FINAL ── */
+.final{position:relative;padding:5rem 1.5rem;text-align:center;
+  background-image:url('IMG_0205.jpg');
+  background-size:cover;background-position:center}
+.final::before{content:'';position:absolute;inset:0;background:rgba(10,10,10,.85)}
+.final-in{position:relative;z-index:2}
+.final-in h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4.5vw,2.8rem);color:var(--w);font-style:italic;margin-bottom:.65rem}
+.final-in h2 span{color:var(--g)}
+.final-in p{color:#999;font-size:.92rem;max-width:460px;margin:0 auto 2rem}
+
+footer{background:#050505;padding:2rem;text-align:center;border-top:1px solid #141414}
+footer p{font-size:.68rem;color:#333}
+footer img{height:60px;width:auto;opacity:.6;margin:0 auto .75rem;display:block}
+
+@media(max-width:680px){
+  .split,.vit-g,.sobre-g{grid-template-columns:1fr}
+  .simg,.vimg,.sobre-img{min-height:240px}
+  .calc-g,.int-dias,.bon-g{grid-template-columns:1fr}
+  .bc-manual,.bc-int{grid-column:span 1}
+  .bcm-secs,.sobre-stats{grid-template-columns:1fr}
+  .gar-box{grid-template-columns:1fr;gap:1rem}
+  .int-hero{grid-template-columns:1fr}
+  .int-stat{display:none}
+  .entregaveis{grid-template-columns:1fr}
+  .cron{gap:.5rem}
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2080740049455920');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" 
+     src="https://www.facebook.com/tr?id=2080740049455920&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- BARRA TOPO -->
+<div class="bt"><p>⚡ R$ 300 de desconto para as primeiras vagas — oferta por tempo limitado</p></div>
+
+<!-- NAV sticky -->
+<nav class="nav">
+  <img src="logo_fundo_preto.png" alt="Garçom que Vende. Restaurante que Lucra.">
+  <a href="#preco" class="btn" style="width:auto;padding:.6rem 1.4rem;font-size:.74rem">Garantir minha vaga</a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     1. HERO — Grande headline + vídeo + CTA imediato
+═══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-logo"><img src="logo_fundo_preto.png" alt="Garçom que Vende. Restaurante que Lucra."></div>
+    <div class="hero-eyebrow">Método L.U.C.R.O.</div>
+    <h1>O único curso que <em>treina o seu garçom por você.</em></h1>
+    <p class="hero-sub">Nos <strong>6 módulos para o dono</strong>, você constrói o padrão de atendimento da sua casa. O <strong>Módulo Plug &amp; Play</strong> treina o seu garçom para aplicar exatamente esse padrão — com consistência, em qualquer turno, com qualquer equipe.</p>
+    <div style="max-width:580px;margin-bottom:2rem;border-radius:4px;overflow:hidden;border:1px solid rgba(201,168,76,.25)">
+      <div style="position:relative;padding-bottom:56.25%;height:0">
+        <iframe
+          src="https://www.youtube.com/embed/eiW1p5ZKWLM?rel=0&modestbranding=1&color=white"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <span class="hb"><i class="ti ti-book"></i>6 módulos para o dono</span>
+      <span class="hb"><i class="ti ti-player-play"></i>Plug &amp; Play para o garçom</span>
+      <span class="hb"><i class="ti ti-infinity"></i>Acesso vitalício</span>
+      <span class="hb"><i class="ti ti-shield-check"></i>Garantia de 7 dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     2. CTA TOPO — Cronômetro + entregáveis + preço + botão
+═══════════════════════════════════════════════════════ -->
+<section class="cta-top">
+  <div class="cta-top-in">
+    <div class="urgencia">Oferta especial — encerra em</div>
+    <div class="cron">
+      <div class="cb"><span class="cn" id="hh">23</span><span class="cl">horas</span></div>
+      <div class="cb"><span class="cn" id="mm">59</span><span class="cl">min</span></div>
+      <div class="cb"><span class="cn" id="ss2">59</span><span class="cl">seg</span></div>
+    </div>
+    <div class="dpill">🔥 R$ 300,00 de desconto — primeiras vagas</div>
+    <div class="entregaveis">
+      <div class="ei"><i class="ti ti-video"></i><span><strong>6 Módulos para o dono</strong>Visão, padrão, vendas, experiência e gestão</span></div>
+      <div class="ei"><i class="ti ti-player-play"></i><span><strong>Módulo Plug &amp; Play</strong>12 aulas do garçom direto no celular</span></div>
+      <div class="ei"><i class="ti ti-file-text"></i><span><strong>Manual de Atendimento</strong>Template preenchível com seus scripts</span></div>
+      <div class="ei"><i class="ti ti-messages"></i><span><strong>Scripts de Upsell</strong>Por janela de venda e perfil de cliente</span></div>
+      <div class="ei"><i class="ti ti-checklist"></i><span><strong>Checklists de Turno</strong>Abertura, durante e fechamento</span></div>
+      <div class="ei"><i class="ti ti-users"></i><span><strong>Integração em 3 Dias</strong>Novo garçom treinado antes do 1º turno</span></div>
+      <div class="ei"><i class="ti ti-star"></i><span><strong>Protocolo Google Reviews</strong>Scripts, QR Code e rotina semanal</span></div>
+      <div class="ei"><i class="ti ti-chart-bar"></i><span><strong>Calculadora de Ticket</strong>Veja em reais o que você está perdendo</span></div>
+    </div>
+    <div class="preco-pill">
+      <div class="p-de">De R$ 997,00</div>
+      <div class="p-val">R$ <span>697</span>,00</div>
+      <div class="p-div">
+        <div class="p-ou">ou em até</div>
+        <div class="p-par"><strong>12x</strong> de R$ 68,15</div>
+        <div class="p-dia">no cartão — menos de R$ 3,00 por dia</div>
+      </div>
+    </div>
+    <a href="https://pay.hotmart.com/U104070177B" class="btn">SIM! QUERO TRANSFORMAR MEU RESTAURANTE AGORA</a>
+    <div class="gm"><i class="ti ti-shield-check"></i> Garantia incondicional de 7 dias — sem letras miúdas</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     3. FOTO FULL — Garçom atendendo | frase impacto
+═══════════════════════════════════════════════════════ -->
+<div class="foto-full f1">
+  <div class="foto-full-txt">
+    <h2>Atendimento é o produto mais lucrativo do seu restaurante.</h2>
+    <p>A comida atrai. O atendimento fideliza, aumenta o ticket e gera avaliações 5 estrelas.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     4. NÃO É / É — Quebrando objeções
+═══════════════════════════════════════════════════════ -->
+<section class="naoe">
+  <div class="wrap">
+    <span class="tag">Antes de tudo</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.4rem);color:var(--w);margin-bottom:.5rem">Este curso não é o que você está pensando.</h2>
+    <p style="font-size:.92rem;color:#AAA;margin-bottom:2rem">E é exatamente por isso que funciona.</p>
+    <div class="naoe-g">
+      <div class="ni"><div class="ni-l"><i class="ti ti-x"></i>Não exige que você vire treinador</div><p>O <strong>Módulo Plug &amp; Play treina o garçom por você</strong> — diretamente, na linguagem do salão, sem você adaptar nada.</p></div>
+      <div class="ni"><div class="ni-l"><i class="ti ti-x"></i>Não é teoria sem aplicação</div><p>Cada aula vem com <strong>material de apoio pronto</strong> — scripts, checklists e passo a passo para aplicar no próximo turno.</p></div>
+      <div class="ni"><div class="ni-l"><i class="ti ti-x"></i>Não depende da sua presença</div><p>O padrão funciona <strong>em qualquer turno, com qualquer garçom</strong> — com ou sem você no salão.</p></div>
+      <div class="ni"><div class="ni-l"><i class="ti ti-x"></i>Não é descartável com rotatividade</div><p><strong>Acesso vitalício.</strong> Cada novo garçom recebe o mesmo treinamento — sem custo extra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     5. ENTREGÁVEIS VISUAIS (estilo Family Shot Cronos)
+═══════════════════════════════════════════════════════ -->
+<section class="family">
+  <div class="wrap">
+    <span class="tag">Veja tudo que você vai ter acesso</span>
+    <h2>Um curso. Dois formatos. Resultado garantido.</h2>
+    <p class="family-sub">6 módulos para o dono + Módulo Plug &amp; Play exclusivo para o garçom</p>
+    <div class="family-grid">
+      <div class="fg fg-dest">
+        <i class="ti ti-video"></i>
+        <h3>6 Módulos para o Dono</h3>
+        <p>Do diagnóstico à gestão sem você — com o Método L.U.C.R.O. completo</p>
+      </div>
+      <div class="fg fg-dest">
+        <i class="ti ti-device-mobile"></i>
+        <h3>Módulo Plug &amp; Play</h3>
+        <p>12 aulas curtas exclusivas para o garçom assistir no celular</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-file-text"></i>
+        <h3>Manual de Atendimento</h3>
+        <p>Template preenchível com os protocolos do seu restaurante</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-messages"></i>
+        <h3>Scripts de Upsell</h3>
+        <p>Por janela de venda e por perfil de cliente — prontos para usar</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-checklist"></i>
+        <h3>Checklists de Turno</h3>
+        <p>Abertura, durante e fechamento — padrão garantido todo dia</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-users"></i>
+        <h3>Integração em 3 Dias</h3>
+        <p>Protocolo para treinar qualquer novo garçom com consistência</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-star"></i>
+        <h3>Protocolo Google Reviews</h3>
+        <p>Scripts, QR Code configurado e rotina semanal de 20 minutos</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-chart-bar"></i>
+        <h3>Calculadora de Ticket</h3>
+        <p>Veja em reais a perda por categoria no seu restaurante</p>
+      </div>
+      <div class="fg">
+        <i class="ti ti-infinity"></i>
+        <h3>Acesso Vitalício</h3>
+        <p>Use com cada novo garçom — pague uma vez, treine para sempre</p>
+      </div>
+    </div>
+    <a href="https://pay.hotmart.com/U104070177B" class="btn" style="max-width:480px;margin:0 auto">QUERO GARANTIR MINHA VAGA AGORA</a>
+    <div class="gm" style="margin-top:.65rem"><i class="ti ti-shield-check"></i> Garantia incondicional de 7 dias</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     6. SPLIT — Foto garçom treinando + diferencial
+═══════════════════════════════════════════════════════ -->
+<div class="split">
+  <div class="simg simg-1"><div class="simg-ov"></div></div>
+  <div class="stxt">
+    <span class="tag">O grande diferencial</span>
+    <h2>O dono define o padrão. A treinadora treina o garçom.</h2>
+    <p>Quando o seu garçom assistir o módulo Plug &amp; Play, é como se eu estivesse lá — no seu estabelecimento, treinando ele pessoalmente. Sou eu falando com ele. Ensinando o método. Mostrando como fazer.</p>
+    <p><strong style="color:var(--w)">Você não entra nessa equação.</strong></p>
+    <ul class="slist">
+      <li><i class="ti ti-check"></i>Padrão definido pelo dono, transmitido pela treinadora</li>
+      <li><i class="ti ti-check"></i>Garçom treinado antes do primeiro turno sozinho</li>
+      <li><i class="ti ti-check"></i>Funciona com ou sem você presente</li>
+      <li><i class="ti ti-check"></i>Acesso vitalício — novo garçom, mesmo treinamento</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     7. CALCULADORA — Quanto você está perdendo
+═══════════════════════════════════════════════════════ -->
+<section class="calc-sec">
+  <div class="wrap">
+    <span class="tag">Diagnóstico incluído no curso</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.4rem);color:var(--w);margin-bottom:.5rem">Você sabe quanto está deixando na mesa hoje?</h2>
+    <p style="font-size:.92rem;color:#AAA;margin-bottom:2rem;max-width:560px">A calculadora mostra em reais, por categoria, o impacto de não ter padrão de atendimento.</p>
+    <div class="calc-g">
+      <div class="calc-txt">
+        <h2>Calculadora de Perda de Faturamento</h2>
+        <p>Insira os dados do seu restaurante e veja quanto você perde por mês — separado por entradas, bebidas, sobremesas e cafés.</p>
+        <ul class="clist">
+          <li><i class="ti ti-check"></i>Analisa cada categoria separadamente</li>
+          <li><i class="ti ti-check"></i>Considera preço médio e taxa de conversão real</li>
+          <li><i class="ti ti-check"></i>Calcula perda mensal e potencial anual</li>
+          <li><i class="ti ti-check"></i>Resultado em reais — não percentuais abstratos</li>
+          <li><i class="ti ti-check"></i>Disponível ao acessar o curso</li>
+        </ul>
+      </div>
+      <div class="cmock">
+        <div class="cbar"><div class="cbar-dots"><span></span><span></span><span></span></div><div class="cbar-title">Calculadora — Quanto estou perdendo?</div></div>
+        <div class="cbody">
+          <div class="cf"><div class="cfl">Mesas / turnos por semana</div><div class="cfv">25 mesas <span>14 turnos/sem</span></div></div>
+          <div class="cf"><div class="cfl">Entradas — preço / conversão</div><div class="cfv">R$ 38,00 <span>12%</span></div></div>
+          <div class="cf"><div class="cfl">Bebidas / 2ª rodada</div><div class="cfv">R$ 22,00 <span>20%</span></div></div>
+          <div class="cf"><div class="cfl">Sobremesas — preço / conversão</div><div class="cfv">R$ 32,00 <span>8%</span></div></div>
+          <div class="cf"><div class="cfl">Cafés e digestivos</div><div class="cfv">R$ 14,00 <span>6%</span></div></div>
+          <div class="cres">
+            <div class="cres-g">
+              <div class="cri"><div class="cri-l">Entradas</div><div class="cri-v">R$ 5.320</div></div>
+              <div class="cri"><div class="cri-l">Bebidas</div><div class="cri-v">R$ 6.160</div></div>
+              <div class="cri"><div class="cri-l">Sobremesas</div><div class="cri-v">R$ 7.168</div></div>
+              <div class="cri"><div class="cri-l">Cafés</div><div class="cri-v">R$ 3.528</div></div>
+            </div>
+            <div class="cres-mes">
+              <div class="cres-mes-l">Você está perdendo por mês</div>
+              <div class="cres-mes-v">R$ 22.176,00</div>
+              <div class="cres-mes-s">sem um padrão de atendimento estruturado</div>
+            </div>
+            <div class="cano"><div class="cano-in"><div class="cano-l">Impacto anual — calcule o seu no curso</div><div class="cano-v">R$ 266.112,00</div><div class="cano-s">Use a calculadora com os dados reais do seu restaurante</div></div></div>
+          </div>
+          <div class="clock"><i class="ti ti-lock"></i> disponível ao acessar o curso</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     8. FOTO FULL — Restaurante lotado / fila de espera
+═══════════════════════════════════════════════════════ -->
+<div class="foto-full f2">
+  <div class="foto-full-txt">
+    <h2>Restaurante cheio não é suficiente. Precisa ser lucrativo.</h2>
+    <p>O ticket médio é onde o lucro real mora — e o garçom é quem define se ele sobe ou fica no básico.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     9. SPLIT REV — Foto garçom treinamento + Plug & Play
+═══════════════════════════════════════════════════════ -->
+<div class="split rev">
+  <div class="simg simg-2"><div class="simg-ov"></div></div>
+  <div class="stxt">
+    <span class="tag">Módulo exclusivo para o garçom</span>
+    <h2>12 aulas. 1 garçom treinado. Sem você fazer nada.</h2>
+    <p>O módulo Plug &amp; Play foi criado para falar diretamente com o garçom — na linguagem do salão. Ele assiste no celular antes do turno. Você não precisa estar presente nem explicar nada.</p>
+    <ul class="slist">
+      <li><i class="ti ti-player-play"></i>Como apresentar o cardápio com intenção</li>
+      <li><i class="ti ti-player-play"></i>Como identificar e conduzir cada perfil de cliente</li>
+      <li><i class="ti ti-player-play"></i>As 3 janelas de venda em toda refeição</li>
+      <li><i class="ti ti-player-play"></i>A despedida que planta o retorno</li>
+      <li><i class="ti ti-player-play"></i>Como pedir avaliação no Google no momento certo</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     10. PLUG & PLAY — Grade de aulas
+═══════════════════════════════════════════════════════ -->
+<section class="plug">
+  <div class="wrap">
+    <span class="tag">Plug &amp; Play</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);font-style:italic;margin-bottom:.5rem">O treinamento que você não precisa dar.</h2>
+    <p style="font-size:.9rem;color:#9FE1CB;margin-bottom:2rem;max-width:560px">12 aulas criadas para o garçom — do primeiro contato à despedida que planta o retorno.</p>
+    <div class="plug-g">
+      <div class="pi"><div class="pi-n">Aula 1</div><div class="pi-t">Você não é só um garçom</div><div class="pi-d">O impacto real no faturamento.</div></div>
+      <div class="pi"><div class="pi-n">Aula 2</div><div class="pi-t">L — O primeiro contato</div><div class="pi-d">30 seg que definem o ticket.</div></div>
+      <div class="pi"><div class="pi-n">Aula 3</div><div class="pi-t">U — Conduza qualquer cliente</div><div class="pi-d">2 perguntas que resolvem indecisão.</div></div>
+      <div class="pi"><div class="pi-n">Aula 4</div><div class="pi-t">C — Atenção que fideliza</div><div class="pi-d">Check-in certo. Segunda venda.</div></div>
+      <div class="pi"><div class="pi-n">Aula 5</div><div class="pi-t">R — As 3 janelas de venda</div><div class="pi-d">Onde o dinheiro entra ou escapa.</div></div>
+      <div class="pi"><div class="pi-n">Aula 6</div><div class="pi-t">O — Despedida que faz voltar</div><div class="pi-d">Fechamento em 3 etapas.</div></div>
+      <div class="pi"><div class="pi-n">Aulas 7–12</div><div class="pi-t">Experiência, erros e alta performance</div><div class="pi-d">Os 3 gestos. 4 perfis difíceis. Sistema completo.</div></div>
+    </div>
+    <div class="plug-cta">
+      <div class="pc-f">Sua equipe começa no próximo turno.</div>
+      <div class="pc-s">Acesso imediato. Qualquer dispositivo. Sem depender de você.</div>
+      <a href="https://pay.hotmart.com/U104070177B" class="btn" style="background:var(--g);color:var(--k);width:auto;display:inline-block;padding:.9rem 2.5rem">QUERO O CURSO COMPLETO</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     11. MÓDULOS accordion
+═══════════════════════════════════════════════════════ -->
+<section class="mods">
+  <div class="wrap">
+    <span class="tag">Conteúdo completo</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:.5rem">O que você vai aprender</h2>
+    <p style="font-size:.9rem;color:#AAA;margin-bottom:1.5rem">6 módulos para o dono + Plug &amp; Play para o garçom. Cada aula acompanha material de apoio.</p>
+    <div class="mi" id="m1"><div class="mh" onclick="tm('m1')"><div class="mn">1</div><div class="mw"><div class="mt2">Diagnóstico Honesto</div><div class="ms2">Onde seu dinheiro está escapando · 5 aulas</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="m1-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>Os 5 comportamentos que reduzem o ticket <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Como calcular quanto você perde por mês <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Por que sua equipe não vende — e não é culpa dela</div><div class="ar"><i class="ti ti-player-play"></i>O mapa: o que vai mudar e em que ordem <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>O líder que cria cultura: hospitalidade começa por você <span class="mat"><i class="ti ti-file-text"></i>material</span></div></div></div></div>
+    <div class="mi" id="m2"><div class="mh" onclick="tm('m2')"><div class="mn">2</div><div class="mw"><div class="mt2">O Padrão que Vende</div><div class="ms2">O Método L.U.C.R.O. completo · 5 aulas</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="m2-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>Por que cada garçom atende de um jeito</div><div class="ar"><i class="ti ti-player-play"></i>O Método L.U.C.R.O.: o sistema completo <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>L e U: a abertura que define o ticket <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>C e R: o meio da refeição que define o ticket <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>O: o fechamento que fideliza e o Manual da Casa <span class="mat"><i class="ti ti-file-text"></i>material</span></div></div></div></div>
+    <div class="mi" id="m3"><div class="mh" onclick="tm('m3')"><div class="mn">3</div><div class="mw"><div class="mt2">Garçom Vendedor</div><div class="ms2">As 3 janelas de venda · 5 aulas</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="m3-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>Garçom que anota vs. garçom que vende</div><div class="ar"><i class="ti ti-player-play"></i>As 3 janelas de venda em toda refeição <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Scripts de venda com prova social <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Sobremesa, café e o fechamento que aumenta o ticket <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Metas de ticket por garçom: como acompanhar <span class="mat"><i class="ti ti-file-text"></i>material</span></div></div></div></div>
+    <div class="mi" id="m4"><div class="mh" onclick="tm('m4')"><div class="mn">4</div><div class="mw"><div class="mt2">Experiência que Fideliza</div><div class="ms2">Cada visita vira motivo para voltar · 5 aulas</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="m4-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>O que faz o cliente voltar</div><div class="ar"><i class="ti ti-player-play"></i>Os 3 gestos que criam experiência memorável <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Protocolo de recuperação de erros <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>O protocolo de despedida <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>O Guia de Experiência da Casa <span class="mat"><i class="ti ti-file-text"></i>material</span></div></div></div></div>
+    <div class="mi" id="m5"><div class="mh" onclick="tm('m5')"><div class="mn">5</div><div class="mw"><div class="mt2">Avaliações 5 Estrelas</div><div class="ms2">Google Reviews como ativo · 5 aulas</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="m5-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>Por que o Google Reviews manda no seu restaurante</div><div class="ar"><i class="ti ti-player-play"></i>O timing certo para pedir avaliação <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Protocolo completo: scripts e QR Code <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Como responder avaliações negativas <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Sistema de monitoramento em 20 minutos <span class="mat"><i class="ti ti-file-text"></i>material</span></div></div></div></div>
+    <div class="mi" id="m6"><div class="mh" onclick="tm('m6')"><div class="mn">6</div><div class="mw"><div class="mt2">Gestão sem Você</div><div class="ms2">O padrão que funciona na sua ausência · 5 aulas</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="m6-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>Por que o padrão cai quando você sai</div><div class="ar"><i class="ti ti-player-play"></i>O ritual de 10 minutos antes do turno <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>O líder interno: quem escolher e como delegar <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Feedback e a reunião semanal de 20 minutos <span class="mat"><i class="ti ti-file-text"></i>material</span></div><div class="ar"><i class="ti ti-player-play"></i>Integração em 3 dias e gestão sem você <span class="mat"><i class="ti ti-file-text"></i>material</span></div></div></div></div>
+    <div class="mi pp" id="mpp"><div class="mh" onclick="tm('mpp')"><div class="mn">★</div><div class="mw"><div class="mt2">Plug &amp; Play — Exclusivo para o garçom</div><div class="ms2">12 aulas curtas no celular · o dono não precisa fazer nada</div></div><i class="ti ti-chevron-down mc"></i></div><div class="mb" id="mpp-b"><div class="mbi"><div class="ar"><i class="ti ti-player-play"></i>Introdução: por que esse treinamento vai mudar seu trabalho</div><div class="ar"><i class="ti ti-player-play"></i>Você não é só um garçom — você é o negócio</div><div class="ar"><i class="ti ti-player-play"></i>L — O primeiro contato que define tudo</div><div class="ar"><i class="ti ti-player-play"></i>U — Como conduzir qualquer cliente</div><div class="ar"><i class="ti ti-player-play"></i>C — A atenção que faz o cliente se sentir especial</div><div class="ar"><i class="ti ti-player-play"></i>R — As 3 janelas de venda que todo garçom ignora</div><div class="ar"><i class="ti ti-player-play"></i>O — A despedida que faz o cliente voltar</div><div class="ar"><i class="ti ti-player-play"></i>Os 3 gestos que criam experiência memorável</div><div class="ar"><i class="ti ti-player-play"></i>Quando algo dá errado: transformar erro em fidelização</div><div class="ar"><i class="ti ti-player-play"></i>Avaliações no Google: parte do seu trabalho</div><div class="ar"><i class="ti ti-player-play"></i>Os 4 perfis de cliente difícil e o script para cada um</div><div class="ar"><i class="ti ti-player-play"></i>Os 7 comportamentos que destroem a experiência</div><div class="ar"><i class="ti ti-player-play"></i>O garçom de alta performance: como fazer tudo junto</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     12. CTA MEIO — Segundo botão de compra
+═══════════════════════════════════════════════════════ -->
+<section class="cta-meio">
+  <div class="cta-meio-in">
+    <h2>Você recebe tudo isso.</h2>
+    <p>Curso + materiais de apoio + acesso vitalício. Menos de R$ 3,00 por dia.</p>
+    <div class="preco-mini">De R$ 997,00</div>
+    <div class="preco-val">R$ <span>697</span>,00</div>
+    <div class="preco-parcel">ou <strong>12x</strong> de R$ 68,15</div>
+    <a href="https://pay.hotmart.com/U104070177B" class="btn btn-green" style="max-width:480px;display:block;margin:0 auto">SIM! QUERO TRANSFORMAR MEU RESTAURANTE</a>
+    <div class="gm" style="margin-top:.65rem"><i class="ti ti-shield-check"></i> Garantia de 7 dias — sem letras miúdas</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     13. INTEGRAÇÃO 3 DIAS
+═══════════════════════════════════════════════════════ -->
+<section class="int-sec">
+  <div class="wrap">
+    <span class="tag">Bônus exclusivo</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:.5rem">Alta rotatividade? Seu padrão continua intacto.</h2>
+    <p style="font-size:.9rem;color:#AAA;margin-bottom:1.75rem;max-width:560px">Funcionário novo não precisa mais ser sinônimo de queda no padrão.</p>
+    <div class="int-hero">
+      <div>
+        <span class="int-badge">Bônus exclusivo</span>
+        <div class="int-titulo">Protocolo de Integração em 3 Dias</div>
+        <div class="int-desc">Um sistema passo a passo para integrar qualquer novo funcionário no padrão L.U.C.R.O. — com consistência, sem improvisar, sem depender de quem está há mais tempo na casa.</div>
+      </div>
+      <div class="int-stat"><div class="int-stat-n">3</div><div class="int-stat-t">dias para o garçom estar treinado no padrão da casa</div></div>
+    </div>
+    <div class="iprog">
+      <div class="ips s1"><div class="ipc">1</div><div class="ipl">Conhece</div></div>
+      <div class="iline il1"></div>
+      <div class="ips s2"><div class="ipc">2</div><div class="ipl">Pratica</div></div>
+      <div class="iline il2"></div>
+      <div class="ips s3"><div class="ipc">3</div><div class="ipl">Opera</div></div>
+    </div>
+    <div class="int-dias">
+      <div class="id"><div class="id-hd d1h"><div class="id-num">1</div><div><div class="id-tit">Conhece a Casa</div><div class="id-sub">Cultura e método</div></div></div><div class="id-bd"><div class="id-item"><i class="ti ti-check" style="color:var(--g)"></i>Valores e padrão da casa</div><div class="id-item"><i class="ti ti-check" style="color:var(--g)"></i>Leitura do Manual</div><div class="id-item"><i class="ti ti-check" style="color:var(--g)"></i>Plug &amp; Play aulas 1–4</div><div class="id-item"><i class="ti ti-check" style="color:var(--g)"></i>Simulação com o líder</div></div></div>
+      <div class="id"><div class="id-hd d2h"><div class="id-num">2</div><div><div class="id-tit">Pratica no Salão</div><div class="id-sub">Vendas e feedback</div></div></div><div class="id-bd"><div class="id-item"><i class="ti ti-check" style="color:#5DCAA5"></i>Plug &amp; Play aulas 5–8</div><div class="id-item"><i class="ti ti-check" style="color:#5DCAA5"></i>Treino das 3 janelas</div><div class="id-item"><i class="ti ti-check" style="color:#5DCAA5"></i>Turno acompanhado</div><div class="id-item"><i class="ti ti-check" style="color:#5DCAA5"></i>Feedback estruturado</div></div></div>
+      <div class="id"><div class="id-hd d3h"><div class="id-num">3</div><div><div class="id-tit">Opera com Padrão</div><div class="id-sub">Independência</div></div></div><div class="id-bd"><div class="id-item"><i class="ti ti-check" style="color:#9B7FD4"></i>Plug &amp; Play aulas 9–12</div><div class="id-item"><i class="ti ti-check" style="color:#9B7FD4"></i>Despedida e avaliações</div><div class="id-item"><i class="ti ti-check" style="color:#9B7FD4"></i>Turno com checklist</div><div class="id-item" style="border:none"><i class="ti ti-check" style="color:#9B7FD4"></i>Aprovação e liberação</div></div></div>
+    </div>
+    <div class="int-ft">
+      <i class="ti ti-infinity"></i>
+      <div><strong>Acesso vitalício — treine quantos garçons precisar, para sempre.</strong><p>Novo funcionário entrou? Segue o protocolo de 3 dias. O padrão está transmitido sem custo extra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     14. BÔNUS MATERIAIS
+═══════════════════════════════════════════════════════ -->
+<section class="bon">
+  <div class="wrap">
+    <span class="tag">Materiais de apoio</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:.5rem">Cada aula acompanha material de apoio pronto.</h2>
+    <p style="font-size:.9rem;color:#AAA;margin-bottom:1.75rem">Tudo pronto para aplicar no próximo turno — sem adaptar nada.</p>
+    <div class="bon-g">
+      <div class="bc-manual"><div class="bcm-top"><div class="bcm-ico"><i class="ti ti-file-text"></i></div><div><h4>Manual de Atendimento da Casa</h4><p>O padrão L.U.C.R.O. com os seus scripts e a sua linguagem.</p></div></div><div class="bcm-body"><div class="bcm-secs"><div class="bcm-sec"><i class="ti ti-check"></i><span>Abertura por perfil de cliente</span></div><div class="bcm-sec"><i class="ti ti-check"></i><span>Scripts das 3 janelas de venda</span></div><div class="bcm-sec"><i class="ti ti-check"></i><span>Protocolo de despedida e avaliação</span></div><div class="bcm-sec"><i class="ti ti-check"></i><span>Situações especiais e clientes difíceis</span></div><div class="bcm-sec"><i class="ti ti-check"></i><span>Ganchos de retorno semanais</span></div><div class="bcm-sec"><i class="ti ti-check"></i><span>Campos para personalizar a casa</span></div></div><div class="bcm-ft"><i class="ti ti-users"></i><span>Entregue para cada novo garçom no Dia 1 do Protocolo de Integração</span></div></div></div>
+      <div class="bc-int"><div class="bci-top"><i class="ti ti-users"></i><div><h4>Protocolo de Integração em 3 Dias</h4><p>Novo garçom treinado antes do 1º turno sozinho</p></div></div><div class="bci-body"><div class="bdias"><div class="bdia"><div class="bdia-n" style="color:var(--g)">1</div><div class="bdia-t">Conhece a casa</div></div><div class="bdia"><div class="bdia-n" style="color:#5DCAA5">2</div><div class="bdia-t">Pratica no salão</div></div><div class="bdia"><div class="bdia-n" style="color:#9B7FD4">3</div><div class="bdia-t">Opera sozinho</div></div></div><div class="bit"><i class="ti ti-infinity"></i> Acesso vitalício — use com cada novo funcionário<</div>
+      <div class="bc"><div class="bc-top v"><i class="ti ti-messages"></i></div><div class="bc-body"><div class="bc-t">Scripts de Upsell</div><div class="bc-d">Por janela e perfil de cliente.</div></div></div>
+      <div class="bc"><div class="bc-top g"><i class="ti ti-checklist"></i><span class="bc-bdg">Bônus</span></div><div class="bc-body"><div class="bc-t">Checklists de Turno</div><div class="bc-d">Abertura, durante e fechamento.</div></div></div>
+      <div class="bc"><div class="bc-top v"><i class="ti ti-list-check"></i></div><div class="bc-body"><div class="bc-t">Cartão L.U.C.R.O.</div><div class="bc-d">Passo a passo no turno.</div></div></div>
+      <div class="bc"><div class="bc-top g"><i class="ti ti-star"></i><span class="bc-bdg">Bônus</span></div><div class="bc-body"><div class="bc-t">Protocolo Google Reviews</div><div class="bc-d">Scripts, QR Code e rotina.</div></div></div>
+      <div class="bc"><div class="bc-top v"><i class="ti ti-chart-bar"></i></div><div class="bc-body"><div class="bc-t">Calculadora de Ticket</div><div class="bc-d">Perda por categoria.</div></div></div>
+      <div class="bc"><div class="bc-top g"><i class="ti ti-map"></i></div><div class="bc-body"><div class="bc-t">Régua da Experiência</div><div class="bc-d">Poster área de serviço.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO FULL 3 -->
+<div class="foto-full f3">
+  <div class="foto-full-txt" style="flex-direction:column;gap:1.5rem">
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:#C9A84C;line-height:1">L.U.C.R.O.</div>
+    </div>
+    <h2 style="font-size:clamp(1.2rem,3vw,1.8rem);max-width:560px">O método que transforma cada turno em resultado previsível.</h2>
+    <p style="font-size:.88rem">5 etapas. Scripts prontos. Aplicável no próximo turno.</p>
+  </div>
+</div>
+
+<!-- VITALÍCIO -->
+<section class="vit">
+  <div class="vit-g">
+    <div class="vimg"></div>
+    <div class="vtxt">
+      <span class="tag">Acesso vitalício</span>
+      <h2>Sua equipe sempre treinada. Para sempre.</h2>
+      <p>Alta rotatividade é a realidade do setor. Com o acesso vitalício, cada novo garçom recebe o mesmo treinamento — sem custo extra, sem você precisar refazer nada.</p>
+      <ul class="vlist">
+        <li><i class="ti ti-check"></i>Novo garçom? Compartilha o acesso ao Plug &amp; Play</li>
+        <li><i class="ti ti-check"></i>Ele assiste no celular antes do primeiro turno</li>
+        <li><i class="ti ti-check"></i>O padrão da casa é mantido automaticamente</li>
+        <li><i class="ti ti-check"></i>É como ter a treinadora sempre lá — para sempre</li>
+        <li><i class="ti ti-check"></i>Pague uma vez. Treine para sempre.</li>
+      </ul>
+      <div class="vstat">
+        <div class="vstat-n">82%</div>
+        <div class="vstat-t">das equipes de restaurante trocam pelo menos 1 garçom por trimestre</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="dep">
+  <div class="wrap">
+    <span class="tag">Resultados reais</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:.5rem">O que donos de restaurante estão dizendo</h2>
+    <p style="font-size:.9rem;color:#AAA;margin-bottom:1.75rem">Substitua pelos depoimentos reais dos seus alunos.</p>
+    <div class="dep-g">
+      <div class="dc"><div class="ds">★★★★★</div><p class="dt">"No primeiro mês já senti diferença no ticket médio. Minha equipe finalmente tem um padrão — e eu não preciso repetir as coisas toda semana."</p><div class="da"><div class="dav">AS</div><div><div class="dn">Nome do aluno</div><div class="dca">Cargo e cidade</div></div></div></div>
+      <div class="dc"><div class="ds">★★★★★</div><p class="dt">"O módulo Plug &amp; Play foi o que me vendeu. Coloquei a equipe para assistir antes do turno e no mesmo dia já percebi diferença na postura dos garçons."</p><div class="da"><div class="dav">MR</div><div><div class="dn">Nome do aluno</div><div class="dca">Cargo e cidade</div></div></div></div>
+      <div class="dc"><div class="ds">★★★★★</div><p class="dt">"Minha nota no Google saiu de 4.1 para 4.7 em dois meses. O protocolo de avaliações funcionou muito além do que eu esperava."</p><div class="da"><div class="dav">CF</div><div><div class="dn">Nome do aluno</div><div class="dca">Cargo e cidade</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section class="sobre">
+  <div class="wrap">
+    <div class="sobre-g">
+      <div class="sobre-img"></div>
+      <div class="sobre-txt">
+        <span class="tag">Quem é Celsi Campos</span>
+        <h2>A treinadora que vai estar no seu restaurante — mesmo sem estar lá.</h2>
+        <p>Sou consultora especializada em atendimento e experiência do cliente para restaurantes. Meu trabalho não é focado em "ser simpático" — é estruturar um modelo de atendimento estratégico onde cada interação com o cliente gera mais vendas, melhor percepção de valor e recorrência.</p>
+        <p>Criei o Método L.U.C.R.O. para que qualquer restaurante possa ter um sistema de atendimento replicável — que funcione com qualquer equipe, em qualquer turno, independente da rotatividade.</p>
+        <div class="sobre-stats">
+          <div class="ss"><div class="ss-n">L.U.C.R.O.</div><div class="ss-t">Método proprietário de atendimento estratégico</div></div>
+          <div class="ss"><div class="ss-n">3 dias</div><div class="ss-t">Para treinar qualquer novo garçom no padrão da casa</div></div>
+          <div class="ss"><div class="ss-n">∞</div><div class="ss-t">Treinamentos com o acesso vitalício incluso</div></div>
+          <div class="ss"><div class="ss-n">R$ 3/dia</div><div class="ss-t">Investimento por dia para ter a treinadora sempre presente</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="gar">
+  <div class="wrap" style="text-align:center">
+    <span class="tag">Risco zero</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:2rem">Experimente por 7 dias sem risco algum.</h2>
+    <div class="gar-box">
+      <i class="ti ti-shield-check gar-ico"></i>
+      <div style="text-align:left">
+        <div class="gar-t">Garantia incondicional de 7 dias</div>
+        <p class="gar-d">Se em qualquer momento dos próximos 7 dias você não estiver satisfeito com o conteúdo, basta solicitar o reembolso. Sem burocracia, sem perguntas, sem julgamento. O dinheiro volta integralmente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA PESSOAL -->
+<section class="carta">
+  <div class="wrap">
+    <div class="carta-in">
+      <h2>Quanto mais você demora, mais você deixa na mesa.</h2>
+      <p>Cada turno sem padrão de atendimento é dinheiro que vai embora. Não por má vontade da equipe — mas por falta de método. E método é exatamente o que este curso entrega.</p>
+      <p>O Método L.U.C.R.O. foi construído para que você não precise mais improvisar, repetir orientações toda semana ou depender do talento individual de cada garçom. É um sistema que funciona com qualquer equipe — e que se mantém mesmo com a alta rotatividade do setor.</p>
+      <p>E quando o seu garçom assistir o módulo Plug &amp; Play, é como se eu estivesse lá — treinando ele pessoalmente. Você investe uma vez. E tem uma treinadora dentro do seu restaurante para sempre.</p>
+      <p>Basta apertar o play.</p>
+      <div class="carta-ass">— Celsi Campos</div>
+      <div style="margin-top:2rem;text-align:center">
+        <a href="https://pay.hotmart.com/U104070177B" class="btn" style="max-width:480px;display:inline-block">QUERO TRANSFORMAR MEU RESTAURANTE AGORA</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇO FINAL -->
+<section class="preco-sec" id="preco">
+  <div class="wrap" style="text-align:center">
+    <span class="tag">Investimento</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:2rem">Você recebe tudo isso.</h2>
+    <div class="pcard">
+      <div class="pcard-t">Acesso completo ao curso</div>
+      <div class="pcard-s">+ todos os materiais de apoio incluídos</div>
+      <div class="plista">
+        <div class="pl"><i class="ti ti-check"></i>6 módulos para o dono — visão e padrão do negócio</div>
+        <div class="pl"><i class="ti ti-check"></i>Módulo Plug &amp; Play — 12 aulas para o garçom</div>
+        <div class="pl"><i class="ti ti-check"></i>Manual de Atendimento da Casa (template preenchível)</div>
+        <div class="pl"><i class="ti ti-check"></i>Scripts prontos de upsell, fechamento e avaliação</div>
+        <div class="pl"><i class="ti ti-check"></i>Calculadora de perda de faturamento por categoria</div>
+        <div class="pl"><i class="ti ti-check"></i>Checklists de turno e protocolo de integração em 3 dias</div>
+        <div class="pl"><i class="ti ti-check"></i>Protocolo completo de avaliações no Google</div>
+        <div class="pl"><i class="ti ti-infinity"></i>Acesso vitalício — use com cada novo garçom, para sempre</div>
+      </div>
+      <div class="pnum">
+        <div class="pde">De R$ 997,00</div>
+        <div class="pval">R$ <span>697</span>,00</div>
+        <div class="pbox">
+          <div class="pbox-ou">ou em até</div>
+          <div class="pbox-val"><strong>12x</strong> de R$ 68,15</div>
+          <div class="pbox-desc">no cartão — menos de R$ 3,00 por dia</div>
+        </div>
+        <a href="https://pay.hotmart.com/U104070177B" class="btn">SIM! QUERO TRANSFORMAR MEU RESTAURANTE</a>
+        <div class="gm" style="margin-top:.65rem"><i class="ti ti-shield-check"></i> Garantia incondicional de 7 dias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <span class="tag">Dúvidas frequentes</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--w);margin-bottom:.5rem">Perguntas frequentes</h2>
+    <p style="font-size:.9rem;color:#AAA;margin-bottom:2rem">Sem letras miúdas.</p>
+    <div class="fi"><div class="fq" onclick="tf(this)">Preciso ter experiência em treinamento para aplicar? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">Não. O curso foi criado para o dono que não tem tempo nem experiência com treinamento. Os 6 módulos te dão a visão — e o Plug &amp; Play treina o garçom diretamente, sem você adaptar nada.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">Como funciona o módulo Plug &amp; Play na prática? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">Você compartilha o acesso com a equipe. Os garçons assistem as 12 aulas no próprio celular. Você não precisa estar presente nem explicar nada. É como ter a Celsi treinando o seu garçom pessoalmente.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">Como o curso resolve o problema da alta rotatividade? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">Acesso vitalício. Cada novo garçom assiste o Plug &amp; Play imediatamente — sem custo extra. O Protocolo de Integração em 3 Dias garante que o padrão seja transmitido antes do primeiro turno sozinho.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">Em quanto tempo começo a ver resultado? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">Cada aula termina com um desafio para o próximo turno. Mudanças consistentes no ticket médio e avaliações costumam aparecer entre a 2ª e a 4ª semana.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">Funciona para restaurante pequeno? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">Sim. Funciona com 1 garçom ou com 20. Restaurantes menores costumam ter resultado mais rápido.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">Por quanto tempo tenho acesso? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">O acesso é vitalício. Use com cada novo garçom — sem custo adicional, para sempre.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">Quais são as formas de pagamento? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">Cartão de crédito em até 12x, boleto à vista ou PIX. Hospedado na Hotmart.</div></div></div>
+    <div class="fi"><div class="fq" onclick="tf(this)">E se eu não gostar? <i class="ti ti-chevron-down"></i></div><div class="fr"><div class="fr-in">7 dias de garantia incondicional. Reembolso sem perguntas e sem burocracia.</div></div></div>
+  </div>
+</section>
+
+<!-- CTA FINAL COM FOTO -->
+<section style="position:relative;padding:5rem 1.5rem;text-align:center;background-image:url('IMG_0205.jpg');background-size:cover;background-position:center">
+  <div style="position:absolute;inset:0;background:rgba(10,10,10,.85)"></div>
+  <div style="position:relative;z-index:2">
+    <img src="logo_fundo_preto.png" alt="Garçom que Vende. Restaurante que Lucra." style="height:110px;width:auto;margin:0 auto 2rem;display:block;filter:drop-shadow(0 4px 24px rgba(201,168,76,.5))">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4.5vw,2.8rem);color:#fff;font-style:italic;margin-bottom:.65rem">Sua equipe sempre treinada. <span style="color:#C9A84C">Seu restaurante sempre lucrando.</span></h2>
+    <p style="color:#999;font-size:.92rem;max-width:460px;margin:0 auto 2rem">Você cuida do negócio. A treinadora treina a equipe por você. Acesso vitalício — basta apertar o play.</p>
+    <a href="https://pay.hotmart.com/U104070177B" class="btn" style="width:auto;display:inline-block;padding:1.15rem 2.5rem">QUERO O CURSO COMPLETO AGORA</a>
+    <div class="gm" style="justify-content:center;margin-top:.75rem"><i class="ti ti-shield-check"></i> Garantia incondicional de 7 dias</div>
+  </div>
+</section>
+
+<!-- ÚLTIMA LÂMINA CTA URGÊNCIA -->
+<section style="background:linear-gradient(180deg,#0A0A0A 0%,#16120A 100%);border-top:2px solid #C9A84C;padding:5rem 1.5rem;text-align:center">
+  <div style="max-width:640px;margin:0 auto">
+    <img src="logo_fundo_preto.png" alt="Garçom que Vende. Restaurante que Lucra." style="height:110px;width:auto;margin:0 auto 2rem;display:block;filter:drop-shadow(0 4px 24px rgba(201,168,76,.5))">
+    <div style="display:inline-block;background:#A93226;color:#fff;font-size:.7rem;font-weight:700;padding:5px 18px;border-radius:2px;margin-bottom:1.5rem;letter-spacing:.05em;text-transform:uppercase">🔥 Últimas vagas com desconto de R$ 300</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,5vw,3rem);color:#fff;font-style:italic;margin-bottom:.75rem">Se o garçom não vende,<br><span style="color:#C9A84C">o problema é de método — não de equipe.</span></h2>
+    <p style="font-size:.95rem;color:#AAA;max-width:520px;margin:0 auto 2.5rem;line-height:1.75">Você já sabe o que está acontecendo no seu salão. Agora tem o método para mudar. Basta apertar o play — e a treinadora entra no seu restaurante para sempre.</p>
+    <div style="background:#1C1C1C;border:1px solid rgba(201,168,76,.45);border-radius:6px;padding:1.75rem;max-width:420px;margin:0 auto 1.5rem">
+      <div style="font-size:.78rem;color:#555;text-decoration:line-through;margin-bottom:.15rem">De R$ 997,00</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:#fff;line-height:1;margin-bottom:.1rem">R$ <span style="color:#C9A84C">697</span>,00</div>
+      <div style="border-top:1px solid #2A2A2A;padding-top:.85rem;margin-top:.85rem">
+        <div style="font-size:.62rem;color:#666;text-transform:uppercase;letter-spacing:.08em">ou em até</div>
+        <div style="font-size:1.6rem;font-weight:700;color:#F0D080;margin:.15rem 0 .1rem"><span style="font-size:2rem;font-family:'Cormorant Garamond',serif;font-weight:700">12x</span> de R$ 68,15</div>
+        <div style="font-size:.7rem;color:#777">no cartão — menos de R$ 3,00 por dia</div>
+      </div>
+    </div>
+    <a href="https://pay.hotmart.com/U104070177B" style="display:block;background:#C9A84C;color:#0A0A0A;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1.2rem 2rem;border-radius:3px;max-width:480px;margin:0 auto 1rem;text-decoration:none">SIM! QUERO TRANSFORMAR MEU RESTAURANTE AGORA</a>
+    <div style="font-size:.7rem;color:#666;display:flex;align-items:center;justify-content:center;gap:4px;margin-bottom:2.5rem">
+      <i class="ti ti-shield-check" style="color:#0A5C44;font-size:13px"></i> Garantia incondicional de 7 dias — sem letras miúdas
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;max-width:500px;margin:0 auto;text-align:left">
+      <div style="display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#AAA"><i class="ti ti-check" style="color:#C9A84C;font-size:13px;flex-shrink:0;margin-top:2px"></i>6 módulos para o dono</div>
+      <div style="display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#AAA"><i class="ti ti-check" style="color:#C9A84C;font-size:13px;flex-shrink:0;margin-top:2px"></i>Módulo Plug &amp; Play para o garçom</div>
+      <div style="display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#AAA"><i class="ti ti-check" style="color:#C9A84C;font-size:13px;flex-shrink:0;margin-top:2px"></i>Manual + scripts + checklists</div>
+      <div style="display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#AAA"><i class="ti ti-check" style="color:#C9A84C;font-size:13px;flex-shrink:0;margin-top:2px"></i>Integração em 3 dias</div>
+      <div style="display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#AAA"><i class="ti ti-check" style="color:#C9A84C;font-size:13px;flex-shrink:0;margin-top:2px"></i>Protocolo Google Reviews</div>
+      <div style="display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#AAA"><i class="ti ti-infinity" style="color:#C9A84C;font-size:13px;flex-shrink:0;margin-top:2px"></i>Acesso vitalício para sempre</div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#050505;padding:2rem;text-align:center;border-top:1px solid #141414">
+  <img src="logo_fundo_preto.png" alt="Garçom que Vende. Restaurante que Lucra." style="height:60px;width:auto;opacity:.6;margin:0 auto .75rem;display:block">
+  <p style="font-size:.68rem;color:#333">Garçom que Vende. Restaurante que Lucra. &middot; Método L.U.C.R.O. &middot; Celsi Campos</p>
+  <p style="font-size:.68rem;color:#333;margin-top:.4rem">Ao adquirir o curso, você concorda com os Termos de Uso e a Política de Privacidade.</p>
+</footer>
+
+<script>
+let t=86399;
+function tick(){t--;if(t<0)t=86399;const h=String(Math.floor(t/3600)).padStart(2,'0'),m=String(Math.floor((t%3600)/60)).padStart(2,'0'),s=String(t%60).padStart(2,'0');const eh=document.getElementById('hh'),em=document.getElementById('mm'),es=document.getElementById('ss2');if(eh)eh.textContent=h;if(em)em.textContent=m;if(es)es.textContent=s;}
+setInterval(tick,1000);
+function tm(id){const b=document.getElementById(id+'-b'),c=document.querySelector('#'+id+' .mc');const o=b.classList.toggle('ab');if(c)c.style.transform=o?'rotate(180deg)':'';}
+function tf(el){const r=el.nextElementSibling,i=el.querySelector('i');const o=r.classList.toggle('ab');if(i)i.style.transform=o?'rotate(180deg)':'';}
+</script>
+</body>
+</html>
